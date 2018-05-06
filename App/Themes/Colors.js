@@ -2,6 +2,8 @@ const colors = {
   background: '#EEEEEE',
   primary: '#25a59a',
   primaryText: '#fafafa',
+  secondaryText: 'rgba(0,0,0, 0.7)',
+  primaryLight: '#63d7cb',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',
