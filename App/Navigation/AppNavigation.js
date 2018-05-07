@@ -1,25 +1,39 @@
 import { StackNavigator } from 'react-navigation'
+import ConfirmPasswordScreen from '../Containers/ConfirmPasswordScreen'
 import LoginScreen from '../Containers/LoginScreen'
 import LaunchScreen from '../Containers/LaunchScreen'
+import { Colors } from '../Themes/'
 
 import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  ConfirmPasswordScreen: { screen: ConfirmPasswordScreen, 
+    navigationOptions: {
+      title: 'Confirm New Password'
+    }
+  },
   LoginScreen: {
     screen: LoginScreen,
     navigationOptions: {
       title: 'Login'
     }
   },
-  LaunchScreen: { screen: LaunchScreen }
+  LaunchScreen: { screen: LaunchScreen,
+    navigationOptions: {
+      header: null
+    }
+  }
 }, {
   // Default config for all screens
   headerMode: 'float',
   initialRouteName: 'LoginScreen',
   navigationOptions: {
+    headerLeft: null,
     headerStyle: styles.header,
-    headerTitleStyle: styles.title
+    headerTitleStyle: styles.title,
+    headerBackTitleStyle: styles.title,
+    headerTintColor: Colors.primaryText
   }
 })
 

@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { ScrollView, Text } from 'react-native'
 import { connect } from 'react-redux'
-import LoginForm from '../Components/LoginForm'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
 
 // Styles
-import styles from './Styles/LoginScreenStyle'
+import styles from './Styles/ConfirmPasswordScreenStyle'
+import ConfirmPasswordForm from '../Components/ConfirmPasswordForm'
 
-class LoginScreen extends Component {
+class ConfirmPasswordScreen extends Component {
   // constructor (props) {
   //   super(props)
   //   this.state = {}
@@ -17,7 +17,7 @@ class LoginScreen extends Component {
   render () {
     return (
       <ScrollView style={styles.container}>
-        <LoginForm navigation={this.props.navigation}/>
+        <ConfirmPasswordForm navigation={this.props.navigation}/>
       </ScrollView>
     )
   }
@@ -33,4 +33,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(ConfirmPasswordScreen)
