@@ -1,4 +1,5 @@
 import { StackNavigator } from 'react-navigation'
+import CameraScreen from '../Containers/CameraScreen'
 import ConfirmPasswordScreen from '../Containers/ConfirmPasswordScreen'
 import LoginScreen from '../Containers/LoginScreen'
 import LaunchScreen from '../Containers/LaunchScreen'
@@ -8,6 +9,7 @@ import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
+  CameraScreen: { screen: CameraScreen },
   ConfirmPasswordScreen: { screen: ConfirmPasswordScreen, 
     navigationOptions: {
       title: 'Confirm New Password'
